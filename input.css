@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .btn{
+    @apply px-10 py-2 hidden md:block border-2 border-gray-900 hover:bg-gray-900 duration-200 hover:text-white font-alata tracking-widest font-medium
+  };
+  .item-shelter{
+    @apply absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:scale-110 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70 duration-150
+  }
+  .hamburger{
+    cursor:pointer;
+    width:24px;
+    height:24px;
+    position:relative;
+  }
+  .hamburger-top,.hamburger-middle,.hamburger-bottom{
+    height:2px;
+    width:24px;
+    position:absolute;
+    top:0;
+    left:0;
+    transform: rotate(0);
+    background: #fff;
+    transition:all 0.5s;
+  }
+  .hamburger-middle{
+    transform: translateY(7px)
+  }
+  .hamburger-bottom{
+    transform: translateY(14px)
+  }
+  .open{
+    transform: rotate(90deg)
+  }
+  .open .hamburger-top{
+    transform: rotate(45deg) translateY(6px) translateX(6px)
+  }
+  .open .hamburger-bottom{
+    transform: rotate(-45deg) translateY(6px) translateX(-6px)
+  }
+  .open .hamburger-middle{
+    display:none;
+  }
+}
+
+@layer base{
+  h5{
+    @apply absolute bottom-2 text-white left-6 text-2xl font-light mr-24 group-hover:text-gray-900 group-hover:scale-110 duration-150
+  }
+}
